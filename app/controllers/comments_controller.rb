@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
     @comment.destroy
     respond_to do |format|
       format.turbo_stream
-      format.html { redirect_to @jest, notice: "removed!" }
+      format.html { redirect_to @jest, notice: "removed" }
     end
   end
 
