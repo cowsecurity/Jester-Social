@@ -22,10 +22,9 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment.destroy
-
     respond_to do |format|
       format.turbo_stream
-      format.html { redirect_to @jest, notice: "Comment removed!" }
+      format.html { redirect_to @jest, notice: "removed!" }
     end
   end
 
