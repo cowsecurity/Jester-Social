@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     if @comment.save
       respond_to do |format|
         format.turbo_stream
-        format.html { redirect_to @jest, notice: "Comment added!" }
+        format.html { redirect_to @jest, notice: "addd!" }
       end
     else
       respond_to do |format|
@@ -21,11 +21,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment.destroy if @comment.user == current_user
-
+    @comment.destroy
     respond_to do |format|
       format.turbo_stream
-      format.html { redirect_to @jest, notice: "Comment removed!" }
+      format.html { redirect_to @jest, notice: "remoed" }
     end
   end
 
