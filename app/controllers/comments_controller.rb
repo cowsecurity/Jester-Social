@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     if @comment.save
       respond_to do |format|
         format.turbo_stream
-        format.html { redirect_to @jest, notice: "added!" }
+        format.html { redirect_to @jest, notice: "addd!" }
       end
     else
       respond_to do |format|
