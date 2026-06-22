@@ -21,7 +21,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment.destroy if @comment.user == current_user
+    @comment.destroy
 
     respond_to do |format|
       format.turbo_stream
